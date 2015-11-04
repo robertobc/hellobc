@@ -1,7 +1,7 @@
 package main
 
 import "net/http"
-import "./handlers"
+import "github.com/robertobc/hellobc/handlers"
 
 func main() {
 	http.HandleFunc("/", handlers.Handle)
