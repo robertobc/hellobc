@@ -1,9 +1,14 @@
 package main
 
-import "net/http"
-import "github.com/robertobc/hellobc/handlers"
+import (
+	"fmt"
+	"net/http"
+
+	"github.com/robertobc/hellobc/handlers"
+)
 
 func main() {
 	http.HandleFunc("/", handlers.Handle)
+	fmt.Println("Listening on port 8080...")
 	http.ListenAndServe(":8080", nil)
 }
